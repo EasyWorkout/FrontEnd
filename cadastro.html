@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyWorkout — Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">⚡ EasyWorkout</a>
+        <nav class="main-nav">
+            <a href="index.html">Início</a>
+            <a href="index.html#funcionalidades">Funcionalidades</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+    </div>
+</header>
+
+<main class="form-page">
+    <div class="container form-container">
+
+        <div class="form-header">
+            <h1>Crie sua conta</h1>
+            <p>Junte-se ao EasyWorkout gratuitamente e comece a treinar com inteligência.</p>
+        </div>
+
+        <form action="login.html" method="get" class="register-form">
+
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                        <option value="nao-informar">Prefiro não informar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nível de aptidão física</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="" disabled selected>Selecione seu nível</option>
+                    <option value="iniciante">Iniciante (0 a 6 meses de treino)</option>
+                    <option value="intermediario">Intermediário (6 meses a 3 anos)</option>
+                    <option value="avancado">Avançado (mais de 3 anos)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="objetivo">Objetivo principal</label>
+                <select id="objetivo" name="objetivo" required>
+                    <option value="" disabled selected>Selecione seu objetivo</option>
+                    <option value="hipertrofia">Ganho de massa muscular (hipertrofia)</option>
+                    <option value="forca">Aumento de força</option>
+                    <option value="emagrecimento">Emagrecimento e definição</option>
+                    <option value="condicionamento">Condicionamento físico</option>
+                    <option value="saude">Saúde e bem-estar geral</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dias">Disponibilidade semanal</label>
+                <select id="dias" name="dias" required>
+                    <option value="" disabled selected>Quantos dias por semana?</option>
+                    <option value="2">2 dias por semana</option>
+                    <option value="3">3 dias por semana</option>
+                    <option value="4">4 dias por semana</option>
+                    <option value="5">5 dias por semana</option>
+                    <option value="6">6 dias por semana</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Criar conta grátis</button>
+
+            <p class="form-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+
+        </form>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">⚡ EasyWorkout</a>
+            <p>Treine melhor, evolua sempre.</p>
+        </div>
+        <nav class="footer-nav">
+            <h4>Navegação</h4>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="footer-team">
+            <h4>Equipe — Grupo 7</h4>
+            <a href="Curriculo_Diego_Corte.html" target="_blank">Diego Corte — Currículo</a>
+            <a href="Curriculo_Thales_Hasegawa.html" target="_blank">Thales Hasegawa — Currículo</a>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        <p>&copy; 2026 EasyWorkout — Desenvolvido para a disciplina Programação Web Front-end</p>
+    </div>
+</footer>
+
+</body>
+</html>
