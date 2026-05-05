@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyWorkout — Informações Pessoais</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+
+<aside class="app-sidebar">
+    <div class="sidebar-logo">
+        <a href="index.html">⚡ EasyWorkout</a>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="gestao-treino.html">
+            <span class="nav-icon">📋</span> Gestão de Treino
+        </a>
+        <a href="exibicao-treino.html">
+            <span class="nav-icon">▶️</span> Executar Treino
+        </a>
+        <a href="progressos.html">
+            <span class="nav-icon">📈</span> Progressos
+        </a>
+        <a href="informacoes-pessoais.html" class="active">
+            <span class="nav-icon">👤</span> Informações Pessoais
+        </a>
+    </nav>
+    <div class="sidebar-footer">
+        <a href="index.html">
+            <span class="nav-icon">🚪</span> Sair
+        </a>
+    </div>
+</aside>
+
+<div class="app-main">
+    <header class="app-topbar">
+        <h1>Informações Pessoais</h1>
+        <button type="submit" form="form-pessoal" class="btn btn-primary">Salvar alterações</button>
+    </header>
+
+    <main class="app-content">
+
+        <div class="profile-header">
+            <div class="avatar">👤</div>
+            <div class="profile-info">
+                <h2>Diego Corte</h2>
+                <p>Membro desde janeiro de 2026 · Nível Intermediário</p>
+            </div>
+        </div>
+
+        <form id="form-pessoal">
+
+            <div class="info-card">
+                <h3>Dados Pessoais</h3>
+
+                <div class="info-row">
+                    <span class="info-label">Nome completo</span>
+                    <input type="text" name="nome" value="Diego Corte">
+                </div>
+                <div class="info-row">
+                    <span class="info-label">E-mail</span>
+                    <input type="email" name="email" value="diego@email.com">
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Data de nascimento</span>
+                    <input type="date" name="nascimento" value="2000-03-15">
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Gênero</span>
+                    <select name="genero">
+                        <option value="masculino" selected>Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                        <option value="nao-informar">Prefiro não informar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Medidas Corporais</h3>
+
+                <div class="info-row">
+                    <span class="info-label">Altura (cm)</span>
+                    <input type="number" name="altura" value="178" min="100" max="250">
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Peso atual (kg)</span>
+                    <input type="number" name="peso" value="76" min="30" max="300" step="0.1">
+                </div>
+                <div class="info-row" style="flex-direction:column;align-items:flex-start;gap:8px;">
+                    <span class="info-label">IMC — Índice de Massa Corporal</span>
+                    <div style="width:100%;">
+                        <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-secondary);margin-bottom:4px;">
+                            <span>Abaixo do peso</span>
+                            <span>Normal</span>
+                            <span>Sobrepeso</span>
+                            <span>Obeso</span>
+                        </div>
+                        <div class="imc-bar">
+                            <div class="imc-marker" style="--pos:38%;"></div>
+                        </div>
+                        <p style="font-size:0.82rem;margin-top:6px;">IMC atual: <strong>24.0</strong> — Peso normal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Objetivos de Treino</h3>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="objetivo" value="hipertrofia" checked>
+                        Ganho de massa muscular (hipertrofia)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="objetivo" value="forca">
+                        Aumento de força máxima
+                    </label>
+                    <label>
+                        <input type="checkbox" name="objetivo" value="emagrecimento">
+                        Emagrecimento e definição
+                    </label>
+                    <label>
+                        <input type="checkbox" name="objetivo" value="condicionamento" checked>
+                        Melhora do condicionamento físico
+                    </label>
+                    <label>
+                        <input type="checkbox" name="objetivo" value="saude">
+                        Saúde e bem-estar geral
+                    </label>
+                </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+                <div class="info-card" style="margin-bottom:0;">
+                    <h3>Nível e Disponibilidade</h3>
+                    <div class="info-row">
+                        <span class="info-label">Nível de aptidão</span>
+                        <select name="nivel">
+                            <option value="iniciante">Iniciante</option>
+                            <option value="intermediario" selected>Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Dias por semana</span>
+                        <select name="dias">
+                            <option value="2">2 dias</option>
+                            <option value="3">3 dias</option>
+                            <option value="4" selected>4 dias</option>
+                            <option value="5">5 dias</option>
+                            <option value="6">6 dias</option>
+                        </select>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Duração por sessão</span>
+                        <select name="duracao">
+                            <option value="30">30 min</option>
+                            <option value="45">45 min</option>
+                            <option value="60" selected>60 min</option>
+                            <option value="90">90 min</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="info-card" style="margin-bottom:0;">
+                    <h3>Equipamentos Disponíveis</h3>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="equip" value="barra" checked>
+                            Barra olímpica e anilhas
+                        </label>
+                        <label>
+                            <input type="checkbox" name="equip" value="halteres" checked>
+                            Halteres
+                        </label>
+                        <label>
+                            <input type="checkbox" name="equip" value="maquinas" checked>
+                            Máquinas de academia
+                        </label>
+                        <label>
+                            <input type="checkbox" name="equip" value="cabo">
+                            Polia e cabo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="equip" value="elast">
+                            Elásticos e faixas
+                        </label>
+                        <label>
+                            <input type="checkbox" name="equip" value="corpopeso">
+                            Apenas peso corporal
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyWorkout — Executar Treino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+
+<aside class="app-sidebar">
+    <div class="sidebar-logo">
+        <a href="index.html">⚡ EasyWorkout</a>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="gestao-treino.html">
+            <span class="nav-icon">📋</span> Gestão de Treino
+        </a>
+        <a href="exibicao-treino.html" class="active">
+            <span class="nav-icon">▶️</span> Executar Treino
+        </a>
+        <a href="progressos.html">
+            <span class="nav-icon">📈</span> Progressos
+        </a>
+        <a href="informacoes-pessoais.html">
+            <span class="nav-icon">👤</span> Informações Pessoais
+        </a>
+    </nav>
+    <div class="sidebar-footer">
+        <a href="index.html">
+            <span class="nav-icon">🚪</span> Sair
+        </a>
+    </div>
+</aside>
+
+<div class="app-main">
+    <header class="app-topbar">
+        <h1>Executar Treino</h1>
+        <a href="gestao-treino.html" class="btn btn-outline">← Voltar</a>
+    </header>
+
+    <main class="app-content">
+
+        <div class="workout-banner">
+            <div>
+                <h2>Treino A — Peito e Tríceps</h2>
+                <div class="workout-banner-meta">
+                    <span>⏱ Duração estimada: 65 min</span>
+                    <span>🔁 7 exercícios</span>
+                    <span>🏋️ Hipertrofia</span>
+                </div>
+            </div>
+            <div style="text-align:right;">
+                <div class="timer-display">00:00</div>
+                <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:4px;">Tempo de treino</div>
+            </div>
+        </div>
+
+        <div class="stats-grid" style="margin-bottom:28px;">
+            <div class="stat-card">
+                <div class="stat-label">Séries concluídas</div>
+                <div class="stat-value accent">0</div>
+                <div class="stat-unit">de 21 séries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Exercícios feitos</div>
+                <div class="stat-value">0</div>
+                <div class="stat-unit">de 7</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Volume total</div>
+                <div class="stat-value blue">0</div>
+                <div class="stat-unit">kg registrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Descanso sugerido</div>
+                <div class="stat-value warning" style="font-size:1.3rem;padding-top:6px;">60s</div>
+                <div class="stat-unit">entre séries</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Exercícios</h2>
+            <span class="badge badge-green">Treino A</span>
+        </div>
+
+        <ol class="exercise-list">
+
+            <li>
+                <details class="exercise-item" open>
+                    <summary>
+                        <span class="exercise-number">1</span>
+                        <div class="exercise-info">
+                            <strong>Supino Reto com Barra</strong>
+                            <span>4 séries · 8–12 reps · Descanso: 90s</span>
+                        </div>
+                        <span class="exercise-done">0 / 4 séries</span>
+                    </summary>
+                    <table class="sets-table">
+                        <thead>
+                            <tr>
+                                <th>Série</th>
+                                <th>Carga (kg)</th>
+                                <th>Reps</th>
+                                <th>Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>8–12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>8–12</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>8–12</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>8–12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </li>
+
+            <li>
+                <details class="exercise-item">
+                    <summary>
+                        <span class="exercise-number">2</span>
+                        <div class="exercise-info">
+                            <strong>Supino Inclinado com Halteres</strong>
+                            <span>3 séries · 10–15 reps · Descanso: 75s</span>
+                        </div>
+                        <span class="exercise-done">0 / 3 séries</span>
+                    </summary>
+                    <table class="sets-table">
+                        <thead>
+                            <tr>
+                                <th>Série</th>
+                                <th>Carga (kg)</th>
+                                <th>Reps</th>
+                                <th>Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10–15</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10–15</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10–15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </li>
+
+            <li>
+                <details class="exercise-item">
+                    <summary>
+                        <span class="exercise-number">3</span>
+                        <div class="exercise-info">
+                            <strong>Crucifixo com Halteres</strong>
+                            <span>3 séries · 12–15 reps · Descanso: 60s</span>
+                        </div>
+                        <span class="exercise-done">0 / 3 séries</span>
+                    </summary>
+                    <table class="sets-table">
+                        <thead>
+                            <tr>
+                                <th>Série</th>
+                                <th>Carga (kg)</th>
+                                <th>Reps</th>
+                                <th>Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12–15</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12–15</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12–15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </li>
+
+            <li>
+                <details class="exercise-item">
+                    <summary>
+                        <span class="exercise-number">4</span>
+                        <div class="exercise-info">
+                            <strong>Tríceps Pulley</strong>
+                            <span>4 séries · 12 reps · Descanso: 60s</span>
+                        </div>
+                        <span class="exercise-done">0 / 4 séries</span>
+                    </summary>
+                    <table class="sets-table">
+                        <thead>
+                            <tr>
+                                <th>Série</th>
+                                <th>Carga (kg)</th>
+                                <th>Reps</th>
+                                <th>Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </li>
+
+            <li>
+                <details class="exercise-item">
+                    <summary>
+                        <span class="exercise-number">5</span>
+                        <div class="exercise-info">
+                            <strong>Tríceps Testa com Barra</strong>
+                            <span>3 séries · 10 reps · Descanso: 60s</span>
+                        </div>
+                        <span class="exercise-done">0 / 3 séries</span>
+                    </summary>
+                    <table class="sets-table">
+                        <thead>
+                            <tr>
+                                <th>Série</th>
+                                <th>Carga (kg)</th>
+                                <th>Reps</th>
+                                <th>Meta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td><input type="number" placeholder="0" min="0"></td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </li>
+
+        </ol>
+
+        <div style="display:flex;gap:12px;margin-top:28px;">
+            <a href="progressos.html" class="btn btn-primary btn-lg">Finalizar e Salvar</a>
+            <a href="gestao-treino.html" class="btn btn-outline btn-lg">Cancelar</a>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
