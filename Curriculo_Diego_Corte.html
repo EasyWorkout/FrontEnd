@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo — Diego Corte</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      background: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    .pagina {
+      max-width: 860px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 48px 56px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #1a56db;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0d0d0d;
+      margin-bottom: 6px;
+    }
+
+    .header .subtitulo {
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .header .links-contato {
+      font-size: 0.88rem;
+      color: #1a56db;
+    }
+
+    .header .links-contato a {
+      color: #1a56db;
+      text-decoration: none;
+    }
+
+    .header .links-contato a:hover {
+      text-decoration: underline;
+    }
+
+    /* SEÇÕES */
+    section {
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #1a56db;
+      border-bottom: 1px solid #d1ddf7;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+
+    /* CONTATO */
+    .contato ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 28px;
+    }
+
+    .contato ul li {
+      font-size: 0.88rem;
+      color: #333;
+    }
+
+    .contato ul li a {
+      color: #1a56db;
+      text-decoration: none;
+    }
+
+    .contato ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESUMO */
+    .resumo p {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* HABILIDADES */
+    .habilidades .grupo {
+      margin-bottom: 7px;
+      font-size: 0.88rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .habilidades .grupo strong {
+      color: #0d0d0d;
+    }
+
+    /* PROJETOS / EXPERIÊNCIA */
+    .item-projeto,
+    .item-experiencia {
+      margin-bottom: 16px;
+    }
+
+    .item-projeto h3,
+    .item-experiencia h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      margin-bottom: 2px;
+    }
+
+    .item-projeto .meta,
+    .item-experiencia .periodo {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .item-projeto ul,
+    .item-experiencia ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .item-projeto ul li,
+    .item-experiencia ul li {
+      font-size: 0.875rem;
+      color: #333;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.65;
+      margin-bottom: 2px;
+    }
+
+    .item-projeto ul li::before,
+    .item-experiencia ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1a56db;
+      font-weight: 700;
+    }
+
+    /* EDUCAÇÃO */
+    .item-educacao {
+      margin-bottom: 12px;
+    }
+
+    .item-educacao h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      margin-bottom: 2px;
+    }
+
+    .item-educacao p {
+      font-size: 0.875rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* CERTIFICAÇÕES */
+    .item-cert {
+      margin-bottom: 10px;
+    }
+
+    .item-cert h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      margin-bottom: 1px;
+    }
+
+    .item-cert p {
+      font-size: 0.82rem;
+      color: #555;
+    }
+
+    /* IDIOMAS */
+    .idiomas ul {
+      list-style: none;
+    }
+
+    .idiomas ul li {
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    /* INFORMAÇÕES ADICIONAIS */
+    .info-adicional ul {
+      list-style: none;
+    }
+
+    .info-adicional ul li {
+      font-size: 0.875rem;
+      color: #333;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.65;
+      margin-bottom: 2px;
+    }
+
+    .info-adicional ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1a56db;
+      font-weight: 700;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .pagina { box-shadow: none; margin: 0; padding: 24px 32px; }
+    }
+
+    @media (max-width: 640px) {
+      .pagina { padding: 24px 20px; margin: 0; }
+      .header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pagina">
+
+    <div class="header">
+      <h1>Diego Corte</h1>
+      <p class="subtitulo">Cornélio Procópio – PR &nbsp;|&nbsp; (18) 99198-6982 &nbsp;|&nbsp; diegocorte1771@gmail.com</p>
+      <p class="links-contato">
+        <a href="https://linkedin.com/in/diego-corte" target="_blank">linkedin.com/in/diego-corte</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/diegocorteL33T" target="_blank">github.com/diegocorteL33T</a>
+      </p>
+    </div>
+
+    <section class="resumo">
+      <h2>Resumo Profissional</h2>
+      <p>
+        Desenvolvedor de software em formação (Engenharia de Software, UTFPR – 5º período) com experiência
+        prática em desenvolvimento backend com Java e Spring Boot, incluindo APIs REST, autenticação JWT,
+        arquitetura em camadas e princípios SOLID. Experiência em projetos full-stack com Angular 18 e
+        integração de APIs de inteligência artificial (Google Gemini). Projetos com deploy em produção
+        (Vercel e Railway), versionamento com Git e desenvolvimento colaborativo em equipe. Inglês fluente
+        (C1 – MET), capaz de atuar em ambientes internacionais. GitHub ativo com commits regulares e
+        histórico de projetos reais.
+      </p>
+    </section>
+
+    <section class="habilidades">
+      <h2>Competências Técnicas</h2>
+      <div class="grupo"><strong>Linguagens:</strong> Java 17, Java 21, TypeScript 5.5, C, C++, Python</div>
+      <div class="grupo"><strong>Backend:</strong> Spring Boot, Spring Security (JWT), Spring WebFlux, APIs REST, JPA/Hibernate, Flyway, Lombok, Swagger/OpenAPI</div>
+      <div class="grupo"><strong>Frontend:</strong> Angular 18, Angular Material, RxJS, ngx-translate (i18n), HTML5, SCSS</div>
+      <div class="grupo"><strong>Banco de Dados:</strong> PostgreSQL, MySQL, CockroachDB, H2, Modelagem Relacional</div>
+      <div class="grupo"><strong>DevOps e Infra:</strong> Git, GitHub Actions (CI/CD), Docker, Railway, Vercel, Linux (Arch, Debian, Ubuntu)</div>
+      <div class="grupo"><strong>Boas Práticas:</strong> Princípios SOLID, Padrões de Projeto, Testes Unitários, Clean Code, Tratamento de Exceções, Validação de Dados</div>
+      <div class="grupo"><strong>IA e Dados:</strong> Integração com Google Gemini API, Python para análise de dados, processamento paralelo (OpenMP, Intel TBB)</div>
+      <div class="grupo"><strong>Redes:</strong> HTTP, TCP/UDP, DNS, SSH, FTP, DHCP, SMTP, IPSec, VPN, roteamento e sub-redes</div>
+    </section>
+
+    <section class="projetos">
+      <h2>Projetos</h2>
+
+      <div class="item-projeto">
+        <h3>SmartFridge – Aplicação Full-Stack com Inteligência Artificial</h3>
+        <p class="meta">Projeto Pessoal &nbsp;|&nbsp; Angular 18 + Spring Boot 3.5 + Google Gemini &nbsp;|&nbsp; 2025</p>
+        <ul>
+          <li>Aplicação full-stack para gerenciamento de estoque de geladeira com geração automática de receitas via IA.</li>
+          <li>Backend em Spring Boot 3.5 com Spring WebFlux para chamadas reativas à Google Gemini API (gemini-2.5-flash-lite).</li>
+          <li>Frontend em Angular 18 com Angular Material, RxJS e internacionalização completa (pt/en) via ngx-translate.</li>
+          <li>Persistência com JPA/Hibernate e versionamento de schema com Flyway; banco H2 embarcado.</li>
+          <li>Dashboard com métricas em tempo real: total de itens, vencimentos próximos, estoque baixo por categoria.</li>
+          <li>Deploy em produção: frontend no Vercel, backend no Railway com variável de ambiente para chave de API.</li>
+          <li>Demo ao vivo: <a href="https://smart-fridge-lac.vercel.app" target="_blank">smart-fridge-lac.vercel.app</a> &nbsp;|&nbsp; Código: <a href="https://github.com/diegocorteL33T/SmartFridge" target="_blank">github.com/diegocorteL33T/SmartFridge</a></li>
+        </ul>
+      </div>
+
+      <div class="item-projeto">
+        <h3>Itaú Unibanco – Desafio Técnico de Processo Seletivo</h3>
+        <p class="meta">Desafio Técnico &nbsp;|&nbsp; Java 21 + Spring Boot + Swagger UI &nbsp;|&nbsp; 2025</p>
+        <ul>
+          <li>API REST desenvolvida em Java 21 como desafio técnico do Itaú Unibanco, seguindo especificação rigorosa.</li>
+          <li>Armazenamento de transações 100% em memória, sem banco de dados, com thread-safety e performance otimizada.</li>
+          <li>Endpoint de estatísticas calculando count, sum, avg, min e max das transações dos últimos 60 segundos.</li>
+          <li>Validações completas: rejeição de datas futuras, valores negativos e JSON malformado (HTTP 400/422/201).</li>
+          <li>Documentação da API com Swagger UI e testes unitários cobrindo cenários de erro e caminhos felizes.</li>
+          <li>Código: <a href="https://github.com/diegocorteL33T/ItauDesafio" target="_blank">github.com/diegocorteL33T/ItauDesafio</a></li>
+        </ul>
+      </div>
+
+      <div class="item-projeto">
+        <h3>LudicoM Backend – Sistema de Gestão de Jogos (UTFPR – Projeto de Extensão)</h3>
+        <p class="meta">Projeto Universitário em Equipe &nbsp;|&nbsp; Java 17 + Spring Boot + CockroachDB &nbsp;|&nbsp; 2024–2025</p>
+        <ul>
+          <li>API RESTful para o projeto de extensão LUDICO da UTFPR, que atende ~160 participantes por evento mensal.</li>
+          <li>Responsável pela modelagem das entidades de domínio (UML), criação dos DTOs e apoio na modelagem do banco relacional (CockroachDB).</li>
+          <li>Autenticação e autorização com Spring Security (JWT) e controle de acesso baseado em Roles.</li>
+          <li>Arquitetura em camadas (Controller, Service, Repository) com inversão de dependências e princípios SOLID.</li>
+          <li>Desenvolvimento em sprints com colaboração remota, code review e versionamento via Git/GitHub.</li>
+          <li>Código: <a href="https://github.com/LudicoM-UTFPR/LudicoM-backend" target="_blank">github.com/LudicoM-UTFPR/LudicoM-backend</a></li>
+        </ul>
+      </div>
+
+      <div class="item-projeto">
+        <h3>User Management API</h3>
+        <p class="meta">Projeto Pessoal &nbsp;|&nbsp; Java + Spring Boot + PostgreSQL &nbsp;|&nbsp; 2025</p>
+        <ul>
+          <li>API de gerenciamento de usuários com CRUD completo, demonstrando domínio de REST, JPA e boas práticas de arquitetura.</li>
+          <li>Código: <a href="https://github.com/diegocorteL33T/user-management-api" target="_blank">github.com/diegocorteL33T/user-management-api</a></li>
+        </ul>
+      </div>
+
+      <div class="item-projeto">
+        <h3>Sistema de Gerenciamento de Mercadorias</h3>
+        <p class="meta">Projeto Acadêmico &nbsp;|&nbsp; C &nbsp;|&nbsp; 2024</p>
+        <ul>
+          <li>Sistema de cadastro e consulta de produtos (por nome e ID) desenvolvido em C, com armazenamento em memória.</li>
+          <li>Projeto individual entregue na disciplina de Algoritmos 2, demonstrando domínio de C e lógica de programação.</li>
+        </ul>
+      </div>
+
+      <div class="item-projeto">
+        <h3>Benchmark: Processamento Sequencial vs Paralelo</h3>
+        <p class="meta">Projeto Acadêmico &nbsp;|&nbsp; C++ + OpenMP + Intel TBB + Python &nbsp;|&nbsp; 2024</p>
+        <ul>
+          <li>Análise comparativa de desempenho entre soma sequencial e paralela com OpenMP e Intel TBB.</li>
+          <li>Coleta e interpretação de métricas com Python, avaliando eficiência computacional e speedup.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="educacao">
+      <h2>Formação Acadêmica</h2>
+      <div class="item-educacao">
+        <h3>Bacharelado em Engenharia de Software</h3>
+        <p>Universidade Tecnológica Federal do Paraná (UTFPR) – Cornélio Procópio &nbsp;|&nbsp; Jan/2024 – Em andamento (5º período)</p>
+        <p>Disciplinas concluídas: Estrutura de Dados, Banco de Dados, Engenharia de Software, Segurança da
+          Informação, Sistemas Operacionais, Redes de Computadores, Desenvolvimento Front-end,
+          Programação Orientada a Objetos, Algoritmos, Processos de Produção de Software.</p>
+      </div>
+    </section>
+
+    <section class="certificacoes">
+      <h2>Certificações e Cursos</h2>
+
+      <div class="item-cert">
+        <h3>Trilha: Aprenda a Programar em Java com Orientação a Objetos – Alura</h3>
+        <p>Concluída em Set/2025 &nbsp;|&nbsp; OOP, coleções, streams, lambdas, consumo de APIs, tratamento de erros.</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Trilha: Praticando Java – Alura</h3>
+        <p>Concluída em Set/2025 &nbsp;|&nbsp; Condicionais, laços, encapsulamento, herança, polimorfismo, interfaces, Strings, Regex, data/hora.</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Java: Trabalhando com Lambdas, Streams e Spring Framework – Alura</h3>
+        <p>Concluído em Fev/2026</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Redes e Protocolos: Fundamentos da Web – Alura</h3>
+        <p>Concluído em Set/2025</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Python para Dados: Primeiros Passos – Alura</h3>
+        <p>Concluído em Ago/2025</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>C: Conhecendo a Linguagem das Linguagens + C: Avançando na Linguagem – Alura</h3>
+        <p>Concluídos em Out–Nov/2024</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Carreira Backend Java e Arquitetura de Microserviços – Alura</h3>
+        <p>Em andamento &nbsp;|&nbsp; Kafka, arquitetura orientada a eventos, CI/CD, Kubernetes.</p>
+      </div>
+
+      <div class="item-cert">
+        <h3>Curso Java10x – Backend Java com Spring Boot – Horace Mota (java10x)</h3>
+        <p>Em andamento &nbsp;|&nbsp; APIs REST, Spring Security, arquitetura de microsserviços, boas práticas de backend.</p>
+      </div>
+    </section>
+
+    <section class="idiomas">
+      <h2>Idiomas</h2>
+      <ul>
+        <li><strong>Inglês:</strong> Fluente (C1 – MET) — leitura, escrita e conversação avançadas; capaz de atuar em ambientes e equipes internacionais.</li>
+        <li><strong>Português:</strong> Nativo.</li>
+      </ul>
+    </section>
+
+    <section class="info-adicional">
+      <h2>Informações Adicionais</h2>
+      <ul>
+        <li>GitHub ativo com commits regulares: <a href="https://github.com/diegocorteL33T" target="_blank">github.com/diegocorteL33T</a></li>
+        <li>Experiência com desenvolvimento remoto e colaboração em equipe via Git/GitHub.</li>
+        <li>Perfil proativo, organizado e orientado à resolução de problemas técnicos.</li>
+        <li>Interesse em atuar em projetos desafiadores que envolvam tecnologia e geração de valor ao negócio.</li>
+        <li>Entusiasta de sistemas Linux (Arch, Debian, Ubuntu) e software livre.</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+
+</html>
