@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* Seletor Universal (Opcional) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor de Elemento e 2 Fontes Distintas (1 externa: Roboto, 1 Arial fallback) e Cores com bom contraste */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f5f7;
+    /* Fundo claro */
+    color: #333333;
+    /* Fonte escura */
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seletor de elemento para cabeçalhos com fonte distinta */
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    /* Segunda fonte (externa) */
+    color: #1a237e;
+}
+
+/* Seletor de ID */
+#nome {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    /* Estilo de fonte - negrito (já no Playfair, mas garantindo) */
+    font-weight: 700;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+header p {
+    /* Estilo de fonte - itálico */
+    font-style: italic;
+    color: #555;
+    font-size: 1.2em;
+}
+
+figure img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 15px;
+    border: 3px solid #1a237e;
+}
+
+figcaption {
+    font-size: 0.85em;
+    color: #777;
+    /* Estilo de fonte - oblíquo */
+    font-style: oblique;
+}
+
+/* Seletor de Classe */
+.contato,
+.habilidades,
+.Resumo,
+.experiencia,
+.educacao {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Decoração de texto e comportamento de links */
+a {
+    /* Decoração de texto */
+    text-decoration: none;
+    color: #1565c0;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+/* Seletor de Pseudo-classe (e cor de link ao passar o mouse) */
+a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+    /* Adicionando sublinhado no hover */
+}
+
+/* Seletor de Atributo */
+a[target="_blank"] {
+    /* Destacando links que abrem em nova aba (no nosso caso, LinkedIn e Github) */
+    position: relative;
+}
+
+.periodo {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades ul li {
+    background-color: #e8eaf6;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.Resumo figure img {
+    width: 100px;
+    height: auto;
+    border-radius: 0;
+    border: none;
+}
