@@ -12,7 +12,9 @@
     --accent-hover: #00A87A;
     --text-primary: #FFFFFF;
     --text-secondary: #8B8FA8;
-    --border: #2E3148;
+    --border: #737996;
+    --border-muted: #3A3F58;
+    --focus-ring: #FFD166;
     --danger: #FF4757;
     --warning: #FFA502;
     --blue: #4A90E2;
@@ -28,6 +30,8 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,11 +56,17 @@ a {
     text-decoration: none;
 }
 
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(255, 209, 102, 0.18);
+}
+
 h1, h2, h3, h4 {
     font-family: 'Poppins', 'Inter', sans-serif;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     color: var(--text-primary);
 }
 
@@ -67,6 +77,12 @@ h3 { font-size: 1.1rem; }
 p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+    max-width: 80ch;
+    margin-bottom: 1.9em;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 strong {
@@ -169,7 +185,7 @@ section {
     font-size: 1.25rem;
     font-weight: 800;
     color: var(--accent);
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
 }
 
 .main-nav {
@@ -187,6 +203,11 @@ section {
 
 .main-nav a:hover {
     color: var(--text-primary);
+}
+
+.main-nav a.btn-header-signup,
+.main-nav a.btn-header-signup:hover {
+    color: var(--bg-secondary);
 }
 
 .hero {
@@ -513,7 +534,8 @@ section {
     color: var(--text-primary);
     font-size: 0.9rem;
     font-family: 'Inter', sans-serif;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
     transition: border-color 0.2s;
     width: 100%;
 }
@@ -689,6 +711,7 @@ section {
 .sidebar-nav a.active {
     background: rgba(0, 200, 150, 0.12);
     color: var(--accent);
+    box-shadow: inset 4px 0 0 var(--focus-ring);
 }
 
 .sidebar-nav .nav-icon {
@@ -942,7 +965,8 @@ section {
     color: var(--text-primary);
     font-size: 0.875rem;
     font-family: 'Inter', sans-serif;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
     transition: border-color 0.2s;
     width: 100%;
 }
@@ -1153,7 +1177,8 @@ section {
     font-size: 0.85rem;
     font-family: 'Inter', sans-serif;
     width: 72px;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
     text-align: center;
 }
 
@@ -1206,6 +1231,7 @@ section {
 .tab-nav a.tab-active {
     background: var(--bg-secondary);
     color: var(--text-primary);
+    box-shadow: inset 0 -3px 0 var(--focus-ring);
 }
 
 /* ─── CSS BAR CHART ──────────────────────────────────────── */
@@ -1390,7 +1416,8 @@ section {
     color: var(--text-primary);
     font-size: 0.875rem;
     font-family: 'Inter', sans-serif;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
     transition: border-color 0.2s;
     flex: 1;
     max-width: 260px;
