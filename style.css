@@ -570,6 +570,57 @@ section {
     text-decoration: underline;
 }
 
+.form-message {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    word-spacing: normal;
+    margin-bottom: 14px;
+}
+
+.form-message--error {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: rgba(255, 71, 87, 0.55);
+    color: #ffb3bc;
+}
+
+.form-message--success {
+    background: rgba(0, 200, 150, 0.1);
+    border-color: rgba(0, 200, 150, 0.55);
+    color: var(--accent);
+}
+
+.field-error {
+    display: block;
+    color: #ffb3bc;
+    font-size: 0.76rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+    word-spacing: normal;
+    margin-top: 4px;
+}
+
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+    border-color: var(--danger) !important;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    padding: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    word-spacing: normal;
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
