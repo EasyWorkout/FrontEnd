@@ -14,6 +14,7 @@ Alinhado ao **ODS 3 — Saúde e Bem-Estar** da Agenda 2030 da ONU, o EasyWorkou
 - Tela de execução de treino com registro de séries e cargas
 - Tela de progressos com gráficos e recordes pessoais
 - Tela de informações pessoais com cálculo de IMC
+- Funcionalidades em JavaScript com persistência local via `localStorage`
 - Currículos dos integrantes linkados no rodapé
 
 ---
@@ -43,8 +44,8 @@ EasyWorkout/
 
 - **HTML5** — estrutura semântica (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `figure`)
 - **CSS3** — tema dark, variáveis CSS, Flexbox, Grid, responsivo (960px / 600px)
+- **JavaScript** — validações, autenticação local, gestão de treinos, execução e progressos com `localStorage`
 - **Google Fonts** — Poppins (títulos) + Inter (corpo)
-- Sem JavaScript · Sem frameworks
 
 ---
 
@@ -70,6 +71,12 @@ Nenhuma instalação necessária. Basta abrir o arquivo `index.html` em qualquer
 
 ```bash
 git clone https://github.com/EasyWorkout/FrontEnd.git
+```
+
+Para executar os testes da lógica JavaScript:
+
+```bash
+node tests/easyworkout.test.js
 ```
 
 ---
